@@ -5,6 +5,18 @@ This is a weather app that shows temperature and other interesting stats for a p
 <img alt="Sample of project" src="images/README.png">
 </div>
 
+## Features
+Some features and information my weather app provides are:
+- Precipitation
+- Temperature (°c)
+- City
+- Country
+- Humidity
+- Feels like
+- Low temperature
+- High temperature 
+- Wind speed
+
 ## Running
 
 ### Pages
@@ -27,4 +39,4 @@ To run the project locally, follow these steps:
 ## What I learned
 I made this app with HTML, CSS, and JavaScript. I learned a lot about how each language operates and they come together. With CSS in particular, I learned that it had a lot more features than I expected with features like media queries. Media queries are a tool that allows you to conditionally style your page based on properties such as window width and device type. 
 
-This was also my first experience integrating an API with my project. It was interesting learning a lot about how API keys works and how to utilize them effectively. It definitely made me appreciate that fact that other developers make their data public and available.
+This was also my first experience integrating an API with my project. It was interesting learning a lot about how API keys works and how to utilize them effectively. Open weather map is an API that provides information about the weather across different time frames for areas all over the world. It definitely made me appreciate that fact that other developers make their data public and available.
