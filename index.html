@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <input id="city" type="text" placeholder="Enter city name" spellcheck="false">
             <button><img id="search" src="images/search.png"></button>
         </div>
         <div class="error">
@@ -24,10 +28,31 @@
             <p class="country">US</p>
             <div class="details">
                 <div class="col">
-                    <img src="images/humidity.png">
+                    <img src="images/droplet.png">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/thermometer.png">
+                    <div>
+                        <p class="feels_like">22°c</p>
+                        <p>Feels like</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/templow.png">
+                    <div>
+                        <p class="temp_min">22°c%</p>
+                        <p>Low</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/temphigh.png">
+                    <div>
+                        <p class="temp_max">22°c%</p>
+                        <p>High</p>
                     </div>
                 </div>
                 <div class="col">
@@ -35,27 +60,6 @@
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/humidity.png">
-                    <div>
-                        <p class="feels_like">22°c</p>
-                        <p>Feels like</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/humidity.png">
-                    <div>
-                        <p class="temp_min">22°c%</p>
-                        <p>Low</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/humidity.png">
-                    <div>
-                        <p class="temp_max">22°c%</p>
-                        <p>High</p>
                     </div>
                 </div>
             </div>
@@ -113,6 +117,12 @@
 
         searchBtn.addEventListener("click", () => {
             checkWeather(searchBox.value);
+        })
+
+        document.addEventListener("keypress", (e) => {
+            if(event.key === "Enter" && document.getElementById("city")) {
+                searchBtn.click();
+            }
         })
     </script>
 
